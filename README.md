@@ -22,7 +22,7 @@ sudo docker build -t jxnj502_experiment -f ./Dockerfile.jetson_xavier_nx_jp_502 
 sudo docker run --runtime=nvidia \
            --name jxnj502_experiment_container \
            --rm \
-           -v ~/.vaik-mnist-detection-dataset/train/:/workspace/images \
+           -v ~/.vaik-mnist-detection-dataset:/workspace/vaik-mnist-detection-dataset \
            -v ~/output_trt_model:/workspace/output_trt_model \
            -v $(pwd):/workspace/source \
            -it jxnj502_experiment /bin/bash
@@ -33,6 +33,7 @@ sudo docker run --runtime=nvidia \
 ### Create Pascal VOC xml file
 
 ```shell
+cd /workspace/source
 python inference.py --input_saved_model_path '~/output_trt_model/model.fp16.trt' \
                 --input_classes_path '~/.vaik-mnist-detection-dataset/classes.txt' \
                 --input_image_dir_path '~/.vaik-mnist-detection-dataset/valid' \

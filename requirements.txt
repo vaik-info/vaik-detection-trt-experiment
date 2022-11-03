@@ -1,3 +1,3 @@
 tqdm>=4.64.1
 mean-average-precision>=2021.4.26.0
-vaik-detection-trt-inference @ git+https://github.com/vaik-info/vaik-detection-trt-inference.git@e8838d2b588aae9c0e1a5028ae5eb2e90de7bb64
+vaik-detection-trt-inference @ git+https://github.com/vaik-info/vaik-detection-trt-inference.git@33a9668f8f10d7cda5d95db48b9e5c82a4f257b7

@@ -23,7 +23,7 @@ sudo docker run --runtime=nvidia \
            --name jxnj502_experiment_container \
            --rm \
            -v ~/.vaik-mnist-detection-dataset/train/:/workspace/images \
-           -v ~/input_trt_model:/workspace/outputinput_trt_model_trt_model \
+           -v ~/output_trt_model:/workspace/output_trt_model \
            -v $(pwd):/workspace/source \
            -it jxnj502_experiment /bin/bash
 ```

@@ -1,4 +1,1 @@
-FROM nvcr.io/nvidia/l4t-tensorflow:r35.1.0-tf2.9-py3
-
-COPY requirements.txt /requirements.txt
-RUN cat requirements.txt | xargs -n 1 pip3 install
+FROM nvcr.io/nvidia/l4t-tensorrt:r8.4.1-runtime

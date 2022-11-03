@@ -42,9 +42,9 @@ sudo docker run --runtime=nvidia \
 ```shell
 cd /workspace/source
 python3 inference.py --input_saved_model_path '/workspace/output_trt_model/model.fp16.trt' \
-                --input_classes_path '/workspace/.vaik-mnist-detection-dataset/classes.txt' \
-                --input_image_dir_path '/workspace/.vaik-mnist-detection-dataset/valid' \
-                --output_xml_dir_path '/workspace/.vaik-mnist-detection-dataset/valid_inference' \
+                --input_classes_path '/workspace/vaik-mnist-detection-dataset/classes.txt' \
+                --input_image_dir_path '/workspace/vaik-mnist-detection-dataset/valid' \
+                --output_xml_dir_path '/workspace/vaik-mnist-detection-dataset/valid_inference' \
                 --score_th 0.2 \
                 --nms_th 0.5
 ```
@@ -61,9 +61,9 @@ python3 inference.py --input_saved_model_path '/workspace/output_trt_model/model
 - only amd64(g4dn.xlarge)
 
 ```shell
-python3 calc_map.py --answer_label_dir_path '/workspace/.vaik-mnist-detection-dataset/valid' \
-                --inference_label_dir_path '/workspace/.vaik-mnist-detection-dataset/valid_inference' \
-                --classes_txt_path '/workspace/.vaik-mnist-detection-dataset/classes.txt'
+python3 calc_map.py --answer_label_dir_path '/workspace/vaik-mnist-detection-dataset/valid' \
+                --inference_label_dir_path '/workspace/vaik-mnist-detection-dataset/valid_inference' \
+                --classes_txt_path '/workspace/vaik-mnist-detection-dataset/classes.txt'
 ```
 
 #### Output

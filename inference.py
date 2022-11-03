@@ -40,7 +40,7 @@ if __name__ == '__main__':
     parser.add_argument('--input_image_dir_path', type=str, default='~/.vaik-mnist-detection-dataset/valid')
     parser.add_argument('--output_xml_dir_path', type=str, default='~/.vaik-mnist-detection-dataset/valid_inference')
     parser.add_argument('--score_th', type=float, default=0.2)
-    parser.add_argument('--nms_th', type=float, default=0.5)
+    parser.add_argument('--nms_th', type=float, default=None)
     args = parser.parse_args()
 
     args.input_saved_model_path = os.path.expanduser(args.input_saved_model_path)

@@ -18,7 +18,14 @@ pip install -r requirements.txt
 - arm64(JetsonXavierNX)
 
 ```shell
-cat requirements.txt | xargs -n 1 pip install
+sudo docker build -t jxnj502_experiment -f ./Dockerfile.jetson_xavier_nx_jp_502 .
+sudo docker run --runtime=nvidia \
+           --name jxnj502_experiment_container \
+           --rm \
+           -v ~/.vaik-mnist-detection-dataset/train/:/workspace/images \
+           -v ~/input_trt_model:/workspace/outputinput_trt_model_trt_model \
+           -v $(pwd):/workspace/source \
+           -it jxnj502_experiment /bin/bash
 ```
 
 ## Usage

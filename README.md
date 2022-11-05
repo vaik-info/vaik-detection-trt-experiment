@@ -1,6 +1,6 @@
 # vaik-detection-trt-experiment
 
-Create Pascal VOC xml file by inference model. Calc mAP and draw a box with score.
+Create Pascal VOC xml file by Tensor RT inference model. Calc mAP and draw a box with score.
 
 ## Example
 

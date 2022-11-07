@@ -19,7 +19,7 @@ def main(input_saved_model_path, input_classes_path, input_image_dir_path, outpu
     types = ('*.jpg', '*.jpeg', '*.png', '*.JPG', '*.JPEG', '*.PNG')
     image_path_list = []
     for files in types:
-        image_path_list.extend(glob.glob(os.path.join(input_image_dir_path, files), recursive=True))
+        image_path_list.extend(glob.glob(os.path.join(input_image_dir_path, '*', files), recursive=True))
 
     image_list = []
     for image_path in tqdm(image_path_list):
